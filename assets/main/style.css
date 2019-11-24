@@ -377,10 +377,15 @@ h5 {
 	top: 1px;
 }
 
-@media only screen and (max-width: 1124px) {
+@media only screen and (max-width: 1350px) {
 	#DeliverySect .parent-Deliver {
 		display: block;
 	}
+
+	#intro-menu .sushiimg{
+		margin-top: -30%;
+	}
+
 }
 
 footer section{

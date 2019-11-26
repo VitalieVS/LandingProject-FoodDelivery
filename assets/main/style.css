@@ -526,6 +526,10 @@ mark{
 	background-color: transparent;
 }
 
+#ContactScroll #dialog{
+	display: hidden;
+}
+
 @media only screen and (max-width: 1350px) {
 
 	#DeliverySect .parent-Deliver {

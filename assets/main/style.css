@@ -85,7 +85,8 @@ h2,h3 {
 }
 
 .sushiimg img {
-	width: 75%;
+	width: 85%;
+	margin-top: -100px;
 	border-radius: 30%;
 }
 
@@ -500,7 +501,7 @@ footer ul{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 1fr;
-	grid-column-gap: 50px;
+	grid-column-gap: 20px;
 	grid-row-gap: 0px;
 }
 
@@ -526,8 +527,13 @@ mark{
 }
 
 @media only screen and (max-width: 1350px) {
+
 	#DeliverySect .parent-Deliver {
-		display: block;
+		display: inline-block;
+	}
+
+	#DeliverySect .parent-Deliver li {
+		margin: 30px;
 	}
 
 	#intro-menu .sushiimg{

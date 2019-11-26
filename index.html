@@ -468,14 +468,20 @@
               <h2>Receive a call</h2>
                 <div class="textbox">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Your Name">
+                    <input type="text" placeholder="Your Name" id="name">
                 </div>
 
                  <div class="textbox">
                     <i class="fas fa-lock"></i>
-                    <input type="text" placeholder="Your phone number">
+                    <input type="text" placeholder="Your phone number"
+                    id="phone">
                 </div>
-              <input type="button" class="btn" value="Receive">
+              <input type="button" class="btn" value="Receive" id="button-press">
+        </div>
+        <div id="dialog" title="DialogError">
+            <p>Please check your name or you password.</p>
+            <p>Name should be real, from 8 to 28 characters</p>
+            <p>Phone number should be valid (Moldova)!</p>
         </div>
     </section>
 

@@ -1,46 +1,27 @@
-$(document).ready(function(){
-  	 AOS.init();
+$(document).ready(function () {
+    AOS.init();
 
-  	 $("#button-press").click(function() {  	 	
-		let name = getValue('name');
-		let phone = getValue('phone');
-		
-  	 	if (!validName(name) || !validPhone(phone)) {
-  	 		showErrors();  	 		
-  	 	} else {
-  	 		submitData();
-  	 	}
-	});
-
-  	 $(function() {
+    $(function () {
         $("#tabs").tabs();
-     });
+    });
+
+    const name = (x) => {
+        return x.length < 17;
+    };
+
+    const pw = (x) => {
+        return x.match('^\\d+$') && x.length > 5;
+    };
+
+    const checkValid = () => {
+        let nm = document.getElementById("name").value;
+        let nb = document.getElementById("number").value;
+        if (name(nm) && pw(nb)) {
+            alert("Wait for our call");
+        } else {
+            alert("please enter real data");
+        }
+
+    };
+    document.getElementById("send").addEventListener("click", checkValid);
 });
-	
-	function validName(name){
-		return name.length >= 3 && name.length < 29 ;//&& (name.match(/\d+/g));
-	}
-
-	function validPhone(phone){
-		return phone.length > 7 && phone.length < 10 ;// && !(phone.match(/^[A-Za-z]+$/));
-	}
-	
-	function getValue(fieldName) {
-		return document.getElementById(fieldName).value
-	}
-
-	function submitData() {
-		$("#call-form.login-box.btn").css("background-color: red;");
-	}
-
-	function showErrors(){
-		$("#dialog").dialog();
-	}
-
-
-
-
-//a = "fgdfgfdr5t4353454";
-
-//b = (a.length >= 3 && a.length < 29 && (a.search(/\d+/g)));
-//alert(b); //8
